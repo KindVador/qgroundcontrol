@@ -1436,6 +1436,8 @@ FactMetaData* FactMetaData::createFromJsonObject(const QJsonObject& json, QMap<Q
 
     if (json.contains(_categoryJsonKey)) {
         metaData->setCategory(json[_categoryJsonKey].toString());
+    } else {
+        metaData->setCategory("Standard");
     }
 
     return metaData;
